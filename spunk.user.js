@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Spunk.js
-// @namespace    http://tampermonkey.net/
-// @version      0.0.3
-// @description  Search for free version of Steam games
-// @author       You
+// @namespace    mailto:retr0x1de@protonmail.ch
+// @version      0.0.4
+// @description  Get links to download games from Steam store page from recommended websites on /r/Piracy subreddit.
+// @author       Kynda
 // @match        https://store.steampowered.com/app/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=steampowered.com
 // @grant        none
@@ -58,7 +58,6 @@
 
     const areaPurchase = document.querySelector('.game_area_purchase');
     const div = createDomElement('div', { className: 'game_area_purchase_game' });
-
     const h1 = createDomElement('h1', { textContent: `Download ${gameTitle}`, style: { marginBottom: '10px' } });
 
     div.appendChild(h1);
@@ -74,6 +73,7 @@
 
     function createDomElement(tag, options) {
         const element = document.createElement(tag);
+    
         Object.keys(options).forEach(key => {
             if (key === 'style') {
                 Object.assign(element.style, options[key]);
