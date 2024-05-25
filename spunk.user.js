@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spunk.js
 // @namespace    http://tampermonkey.net/
-// @version      2024-05-25
+// @version      0.0.3
 // @description  Search for free version of Steam games
 // @author       You
 // @match        https://store.steampowered.com/app/*
