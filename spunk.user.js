@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spunk.js
 // @namespace    mailto:retr0x1de@protonmail.ch
-// @version      0.0.4
+// @version      0.0.5
 // @description  Get links to download games from Steam store page from recommended websites on /r/Piracy subreddit.
 // @author       Kynda
 // @match        https://store.steampowered.com/app/*
@@ -16,7 +16,7 @@
     'use strict';
 
     const gameTitle = document.querySelector('.apphub_AppName').textContent
-    const encodedGameTitle = encodeURI(gameTitle.replace(/[^a-zA-Z0-9 ]/g, ''));
+    const encodedGameTitle = encodeURI(gameTitle.replace(/[^a-zA-Z0-9 "' ]/g, ''));
     const sitesList = [
         {
             name: 'SteamRIP',
@@ -73,7 +73,7 @@
 
     function createDomElement(tag, options) {
         const element = document.createElement(tag);
-    
+
         Object.keys(options).forEach(key => {
             if (key === 'style') {
                 Object.assign(element.style, options[key]);
