@@ -8,8 +8,8 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=steampowered.com
 // @grant        none
 // @run-at       document-end
-// @downloadURL  
-// @updateURL
+// @downloadURL  https://github.com/Shadawks/Spunk.js/raw/main/spunk.user.js
+// @updateURL    https://github.com/Shadawks/Spunk.js/raw/main/spunk.user.js
 // ==/UserScript==
 
 (function() {
